@@ -1,16 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   margin: 0;
   height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+
+.bg {
+  background: url("https://images.unsplash.com/photo-1473621038790-b778b4750efe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80")
+    no-repeat left center;
+  position: absolute;
+  /* remove empty whitespace from the border of the blurred image*/
+  top: -30px;
+  left: -30px;
+  width: calc(100vw + 60px);
+  height: calc(100vh + 60px);
+  z-index: -1;
+  /* starting blur */
+  filter: blur(0px);
+}
+
+.loading-text {
+  font-size: 50px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(248, 245, 42);
 }
