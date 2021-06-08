@@ -7,10 +7,41 @@
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow-x: hidden;
+}
+
+.h1 {
+  margin: 10px;
+}
+.box {
+  height: 250px;
+  width: 300px;
+  background-color: skyblue;
+  border-radius: 15px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 5px 3px rgba(10, 1, 37, 0.3);
+  /* position the boxes off screen initially */
+  transform: translateX(200%);
+  transition: transform 0.4s ease;
+}
+
+/* set all even boxes to left */
+.box:nth-of-type(even) {
+  transform: translateX(-200%);
+}
+
+/* when an element has both .box and .show */
+.box.show {
+  transform: translateX(0);
+}
+
+.box > h2 {
+  font-size: 30px;
 }
