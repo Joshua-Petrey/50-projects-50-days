@@ -7,6 +7,7 @@ sounds.forEach((sound) => {
   // clicking button stops current sound and play new one
   btn.addEventListener("click", () => {
     stopSongs();
+    // play audio tag
     document.getElementById(sound).play();
   });
   // append each button on the button container
@@ -15,6 +16,7 @@ sounds.forEach((sound) => {
 
 function stopSongs() {
   sounds.forEach((sound) => {
+    // gets each audio tag
     const song = document.getElementById(sound);
     // stop current song
     song.pause();
