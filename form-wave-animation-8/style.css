@@ -85,7 +85,7 @@ body {
 /* the label covers the input box initially */
 .form-control label {
   position: absolute;
-  top: 0px;
+  top: 25px;
   left: 0;
 }
 
@@ -96,7 +96,10 @@ body {
   transition: 0.3s cubic-bezier(0.67, -0.55, 0.265, 1.55);
 }
 
-/* wave transition */
+/* wave transition 
+On focus move each created span up 30px.
+Since each span has an increasing transition delay this will give a wave effect.
+*/
 .form-control input:focus + label span,
 .form-control input:valid + label span {
   color: lightblue;
